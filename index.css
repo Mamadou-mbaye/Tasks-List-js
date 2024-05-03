@@ -1,0 +1,63 @@
+body {
+    display: grid;
+    place-content: center;
+    background-color: rgb(201, 251, 234);
+
+    & #container {
+        width: 260px;
+        max-height: 95vh;
+        background-color: rgb(140, 243, 208);
+        display: grid;
+        place-items: center;
+        border-radius: 3%;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        & form {
+            margin: 5px;
+
+            & div {
+                margin-top: 4px;
+                display: flex;
+                gap: 5px;
+
+                & * {
+                    width: 50%;
+                }
+            }
+        }
+
+        & ul {
+            width: 200px;
+
+            & li {
+                list-style: none;
+                margin-left: -20px;
+                margin-top: 5px;
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: larger;
+                font-weight: bold;
+                margin-bottom: 0px;
+                border-bottom: 3px solid rgba(0 0 0 / 50%);
+
+            }
+        }
+
+        & input {
+            border: none;
+            outline: none;
+            height: 25px;
+
+            &:hover {
+                cursor: pointer;
+                background: rgb(179, 169, 169);
+            }
+        }
+    }
+}
