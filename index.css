@@ -1,12 +1,12 @@
 body {
     display: grid;
     place-content: center;
-    background-color: rgb(201, 251, 234);
+    background-color: rgb(203, 217, 212);
 
     & #container {
         width: 260px;
         max-height: 95vh;
-        background-color: rgb(140, 243, 208);
+        background-color: rgb(166, 204, 191);
         display: grid;
         place-items: center;
         border-radius: 3%;
