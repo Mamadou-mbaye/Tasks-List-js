@@ -58,9 +58,6 @@ form {
         color: aliceblue;
     }
 }
-
-#tasks {}
-
 .list-item {
     background: var(--item-background);
     display: flex;
