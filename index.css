@@ -1,63 +1,104 @@
+:root {
+    --body-backgroud: rgb(214, 214, 222);
+    --btn-background: rgb(255, 255, 255);
+    --item-background: rgb(234 227 213 / 80%);
+    --color: black;
+}
+
+html {
+    overflow: hidden;
+}
+
 body {
+    background: var(--body-backgroud);
+    margin: 0;
     display: grid;
-    place-content: center;
-    background-color: rgb(203, 217, 212);
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    color: var(--color);
+}
 
-    & #container {
-        width: 260px;
-        max-height: 95vh;
-        background-color: rgb(166, 204, 191);
-        display: grid;
-        place-items: center;
-        border-radius: 3%;
-        overflow: auto;
+::-webkit-scrollbar {
+    width: 0.5em;
+    background: transparent;
+}
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(131 124 124 / 65%);
+}
 
-        & form {
-            margin: 5px;
+#container {
+    display: flex;
+    flex-direction: column;
+}
 
-            & div {
-                margin-top: 4px;
-                display: flex;
-                gap: 5px;
+form {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.4vw;
+    position: sticky;
+    top: 0;
+}
 
-                & * {
-                    width: 50%;
-                }
-            }
-        }
+#input {
+    height: 26px;
+    min-width: 300px;
+    max-width: auto;
+    border: none;
+    outline: none;
+    background: var(--btn-background);
 
-        & ul {
-            width: 200px;
+    &:focus {
+        background: rgb(76, 78, 102);
+        color: aliceblue;
+    }
+}
 
-            & li {
-                list-style: none;
-                margin-left: -20px;
-                margin-top: 5px;
-                width: 200px;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                font-size: larger;
-                font-weight: bold;
-                margin-bottom: 0px;
-                border-bottom: 3px solid rgba(0 0 0 / 50%);
+#tasks {}
 
-            }
-        }
+.list-item {
+    background: var(--item-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-        & input {
-            border: none;
-            outline: none;
-            height: 25px;
+    & button {
+        margin-right: 0.7em;
+    }
+}
 
-            &:hover {
-                cursor: pointer;
-                background: rgb(179, 169, 169);
-            }
-        }
+.item {
+    overflow-y: auto;
+    max-width: 80vw;
+    margin-left: 0.7em;
+}
+
+button {
+    cursor: pointer;
+    height: 26px;
+    border-style: none;
+    font-weight: 600;
+    background: var(--btn-background);
+
+    &:hover {
+        background: rgb(89, 85, 77);
+        color: aliceblue;
+        scale: 0.9;
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+
+        --body-backgroud: rgb(40, 38, 38);
+        --btn-background: #8d8787;
+        --item-background: rgba(64, 64, 64, 0.8);
+        --color: rgb(191, 180, 180);
     }
 }
