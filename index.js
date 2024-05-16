@@ -40,7 +40,7 @@ function createTaskElement(taskText) {
 }
 
 function deleteTask() {
-  const taskText = this.parentNode.querySelector("p").innerText;
+  const taskText = this.parentNode.querySelector("span").innerText;
   this.parentNode.remove();
   let tasksArray = JSON.parse(localStorage.getItem("tasks")) || [];
   const newTasksArray = tasksArray.filter((task) => task !== taskText);
