@@ -25,7 +25,7 @@ function addTask() {
 function createTaskElement(taskText) {
   const p = document.createElement("p");
   p.className = "list-item";
-  p.innerHTML = `<p class="item">${taskText}</p> <button class="delete-task">delete task</button>`;
+  p.innerHTML = `<span class="item">${taskText}</span><button class="delete-task"><i class="fa-solid fa-trash"></i></button>`;
   // Inserisce il nuovo task come primo elemento all'interno del contenitore delle tasks
   if (tasks.firstChild) {
     tasks.insertBefore(p, tasks.firstChild);

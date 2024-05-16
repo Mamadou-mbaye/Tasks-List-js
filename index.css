@@ -1,101 +1,84 @@
 :root {
-    --body-backgroud: rgb(214, 214, 222);
-    --btn-background: rgb(255, 255, 255);
-    --item-background: rgb(234 227 213 / 80%);
-    --color: black;
-}
-
-html {
-    overflow: hidden;
+  --body-backgroud: #0d0c28;
+  --btn-background: ;
+  --item-background: ;
+  --color: black;
 }
 
 body {
-    background: var(--body-backgroud);
-    margin: 0;
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    color: var(--color);
+  background: #083543;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  color: #e8dbea;
 }
 
 ::-webkit-scrollbar {
-    width: 0.5em;
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(131 124 124 / 65%);
+  display: none;
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
+  width: 300px;
 }
 
 form {
-    min-height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.4vw;
-    position: sticky;
-    top: 0;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4vw;
+  position: sticky;
+  top: 0;
 }
-
+#tasks {
+  overflow: auto;
+}
 #input {
-    height: 26px;
-    min-width: 200px;
-    max-width: auto;
-    border: none;
-    outline: none;
-    background: var(--btn-background);
-
-    &:focus {
-        background: rgb(76, 78, 102);
-        color: aliceblue;
-    }
+  height: 26px;
+  width: 98%;
+  border: none;
+  outline: none;
+  margin-top:2px;
+  &:focus {
+    background: rgb(76, 78, 102);
+    color: aliceblue;
+  }
 }
-.list-item {
-    background: var(--item-background);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.input,
+#buttone,
+#btn-reset {
+  background: #e8dbea;
+  border-radius: 4px;
+  width:45%;
+}
 
-    & button {
-        margin-right: 0.7em;
-    }
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & button {
+    margin-right: 0.7em;
+  }
 }
 
 .item {
-    overflow-y: auto;
-    max-width: 80vw;
-    margin-left: 0.7em;
+  overflow-y: hidden;
+  max-width: 80%;
+}
+.delete-task {
+  background: transparent;
+  color: #e8dbea;
 }
 
 button {
-    cursor: pointer;
-    height: 26px;
-    border-style: none;
-    font-weight: 600;
-    background: var(--btn-background);
-
-    &:hover {
-        background: rgb(89, 85, 77);
-        color: aliceblue;
-        scale: 0.9;
-    }
-}
-
-@media(prefers-color-scheme:dark) {
-    :root {
-
-        --body-backgroud: rgb(40, 38, 38);
-        --btn-background: #8d8787;
-        --item-background: rgba(64, 64, 64, 0.8);
-        --color: rgb(191, 180, 180);
-    }
+  cursor: pointer;
+  height: 26px;
+  border-style: none;
+  &:hover {
+    scale: 0.9;
+  }
 }
